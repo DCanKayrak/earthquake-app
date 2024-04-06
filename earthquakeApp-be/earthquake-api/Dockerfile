@@ -1,11 +1,12 @@
+FROM openjdk:17-jdk-slim as build
+WORKDIR /earthquake-api
+COPY . .
+RUN ./mvnw -DskipTests clean package
+
 FROM openjdk:17-jdk-slim
-WORKDIR /app
-EXPOSE 8080
+WORKDIR /earthquake-api
+COPY --from=build /earthquake-api/target/*.jar ./earthquake-api.jar
 
-ARG JAR_FILE=/target/*.jar
+ENV SPRING_PROFILES_ACTIVE=dev
 
-COPY ${JAR_FILE} /app/app.jar
-
-ENV SPRING_PROFILES_ACTIVE=prod
-
-CMD ["java", "-jar", "-Dspring.profiles.active=${SPRING_PROFILES_ACTIVE}", "app.jar"]
+ENTRYPOINT ["java", "-jar", "-Dspring.profiles.active=${SPRING_PROFILES_ACTIVE}", "earthquake-api.jar"]
