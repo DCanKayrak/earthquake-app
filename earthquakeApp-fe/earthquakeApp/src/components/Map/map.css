@@ -1,0 +1,37 @@
+hr {
+    margin: 0!important;
+}
+
+.marker-container {
+
+}
+
+.marker-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.marker-title {
+    font-size: 0.7rem;
+    align-items: center;
+    opacity: 90%;
+}
+
+@keyframes grow {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  .circle {
+    width: 100px; /* Başlangıçta çemberin genişliğini sıfıra ayarla */
+     /* Başlangıçta çemberin yüksekliğini sıfıra ayarla */
+    border-radius: 50%; /* Çemberi yuvarlak hale getir */
+    border: 2px solid red; /* Çemberin sınırlarını ve rengini belirle */
+    position: absolute; /* Mutlak konumlandırma */
+    animation: grow 5s forwards; /* Animasyonu başlat (5 saniye sürer) ve son durumu sabitle */
+  }
