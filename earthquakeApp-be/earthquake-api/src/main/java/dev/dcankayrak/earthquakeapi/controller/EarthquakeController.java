@@ -25,7 +25,7 @@ public class EarthquakeController {
     }
 
     @GetMapping("/{id}")
-    public DataResult<EarthquakeResponse> getWithId(@RequestParam String id){
+    public DataResult<EarthquakeResponse> getWithId(@PathVariable String id){
         return this.earthquakeService.getWithId(id);
     }
 
