@@ -24,4 +24,7 @@ Projede yer alan endpointler şunlardır;
 `DELETE /earthquake/{id}` -> Id'si gönderilen depremi siler.
 
 ## Projeden Alıntılar
+![image](https://github.com/DCanKayrak/earthquake-app/assets/94143272/66afdb11-19eb-465f-bc53-cf55b7cf0982)
+
+![image](https://github.com/DCanKayrak/earthquake-app/assets/94143272/e6e904c7-3ce2-4e19-9dda-9904236b76d3)
 
